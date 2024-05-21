@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-21T14:44:59.772568" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Parity" source="C:\Python\Parity_Test\Test\Test_Parity.robot">
+<test id="s1-t1" name="Print Scalar Variable" line="9">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-21T14:44:59.803312" level="INFO">10</msg>
+<arg>${NUMBER}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</kw>
+<doc>Checks the printing of a scalar variable.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</test>
+<test id="s1-t2" name="Print List Variable" line="13">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-21T14:44:59.803312" level="INFO">['1', '2', '3', '4', '5']</msg>
+<arg>${NUMBERS}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</kw>
+<doc>Checks the printing of a list variable.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</test>
+<test id="s1-t3" name="Check Even Numbers" line="17">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-21T14:44:59.803312" level="INFO">${even_numbers} = [2, 4]</msg>
+<var>${even_numbers}</var>
+<arg>[int(num) for num in ['1', '2', '3', '4', '5'] if int(num) % 2 == 0]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-05-21T14:44:59.803312" level="INFO">${even_numbers_string} = [2, 4]</msg>
+<var>${even_numbers_string}</var>
+<arg>${even_numbers}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${even_numbers_string}</arg>
+<arg>[2, 4]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</kw>
+<doc>Check the even numbers in the list.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</test>
+<test id="s1-t4" name="Check Odd Numbers" line="23">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-21T14:44:59.803312" level="INFO">${odd_numbers} = [1, 3, 5]</msg>
+<var>${odd_numbers}</var>
+<arg>[int(num) for num in ['1', '2', '3', '4', '5'] if int(num) % 2 != 0]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-05-21T14:44:59.803312" level="INFO">${odd_numbers_string} = [1, 3, 5]</msg>
+<var>${odd_numbers_string}</var>
+<arg>${odd_numbers}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${odd_numbers_string}</arg>
+<arg>[1, 3, 5]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</kw>
+<doc>Check the odd numbers in the list.</doc>
+<status status="PASS" start="2024-05-21T14:44:59.803312" elapsed="0.000000"/>
+</test>
+<status status="PASS" start="2024-05-21T14:44:59.772568" elapsed="0.030744"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Test Parity">Test Parity</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
